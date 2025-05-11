@@ -6,7 +6,7 @@
   <title>Survey</title>
 </head>
 <body>
-  <form id="form">
+  <form id="form" action='/submit' method="post">
 
     <div id="form-first-name">
       <label for="fname">First Name: </label>
@@ -130,6 +130,9 @@
         <option value="option">107</option>
         <option value="option">108</option>
       </select>
+    </div>
+    <div>
+      <button type="submit" id="submit-button">Submit</button>
     </div>
 
   </form>
