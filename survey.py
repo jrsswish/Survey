@@ -5,10 +5,12 @@ app = Flask(__name__)
 
 fields = ['First Name', 'Last Name', 'Age']
 
-
-with open('data.csv', 'w') as csvfile:
-  csvwriter = csv.writer(csvfile)
-  csvwriter.writerow(fields)
+try:
+  with open('data.csv', 'x') as csvfile:
+    csvwriter = csv.writer(csvfile)
+    csvwriter.writerow(fields)
+except:
+  print("File already exists.")
 
 @app.route("/")
 def home():
