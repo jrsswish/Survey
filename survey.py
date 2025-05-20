@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import csv
+from models import mean_age
 
 app = Flask(__name__)
 fields = ['First Name', 'Last Name', 'Age']
@@ -20,6 +21,9 @@ def submit():
   fname = request.form.get("fname")
   lname = request.form.get("lname")
   age = request.form.get("age")
+
+  result = mean_age()
+  print(result)
   
   with open('data.csv', 'a', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
