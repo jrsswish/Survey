@@ -27,7 +27,11 @@ def submit():
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow([fname, lname, age, gender])
     return render_template("index.html")
-  
+
+# result = mean_age()
+# print(result) 
+
+
 if __name__ == "__main__":
   app.run(port=3000, debug=True)
 
