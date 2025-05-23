@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 import csv
-from models import mean_age
+from models import mean_age, graph
 
 app = Flask(__name__)
 fields = ['First Name', 'Last Name', 'Age', 'Gender']
@@ -18,7 +18,8 @@ def home():
 
 @app.route("/stats")
 def stats():
-  return render_template('stats.html')
+  return graph()
+  # return render_template('stats.html')
 
 @app.route("/submit", methods=["POST"])
 def submit():
