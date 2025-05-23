@@ -18,6 +18,8 @@ def graph():
   mean_val = mean_age()  
 
   fig, ax = plt.subplots()
+
+  # creates line from 0-1 x value and mean value-mean value y value
   ax.plot([0, 1], [mean_val, mean_val], label=f"Mean Age: {mean_val:.2f}")  
   ax.set_title("Mean Age")
   ax.set_title("Age mean")
