@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import matplotlib as plt 
+import matplotlib.pyplot as plt 
 import mpld3
 
 
@@ -15,13 +15,14 @@ def mean_age():
   
 def graph():
   # creates the plot
+  mean_val = mean_age()  
+
   fig, ax = plt.subplots()
-  ax.plot(mean_age)
+  ax.plot([0, 1], [mean_val, mean_val], label=f"Mean Age: {mean_val:.2f}")  
+  ax.set_title("Mean Age")
   ax.set_title("Age mean")
 
   # convert plot to html string
   html_str = mpld3.fig_to_html(fig)
 
-  # save to html file
-  with open("stats.html", "w", encoding="utf-8") as f:
-    f.write(html_str)
+  return html_str
