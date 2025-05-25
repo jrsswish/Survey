@@ -7,6 +7,7 @@
 </head>
 <body>
   <form id="form" action='/submit' method="post">
+    <h1>Survey about students:</h1>
 
     <div id="form-first-name">
       <label for="fname">First Name: </label>
@@ -141,7 +142,7 @@
       </select>
     </div>
 
-    <div>
+    <div id="form-submit">
       <button type="submit" id="submit-button">Submit</button>
     </div>
 
@@ -158,9 +159,21 @@
     display:block;
     font-size: 20px;
   }
-  #form input{
+  #form input {
     display: block;
     width: 10%;
     height: 20%;
+  }
+  #form select{
+    display:block;
+    width: 10%;
+  }
+  #form button{
+    display: block;
+    width: 5%;
+  }
+  #form div{
+    display:flex;
+    flex-direction: column;
   }
 </style>
