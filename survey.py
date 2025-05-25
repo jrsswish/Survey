@@ -16,8 +16,8 @@ except:
 def home():
   return render_template('index.html')
 
-@app.route("/stats")
-def stats():
+@app.route("/age")
+def age_mean():
   return graph()
   # return render_template('stats.html')
 
