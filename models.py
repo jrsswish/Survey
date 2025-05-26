@@ -12,7 +12,16 @@ def mean_age():
     age_mean = np.mean(X)
 
     return age_mean
-  
+
+def gender_count():
+  with open('data.csv', 'r') as infile:
+    df = pd.read_csv(infile)
+    X = df[df['Gender'] == 'male'].value_counts
+    X2 = df[df['Gender'] == 'female'].value_counts
+    X3 = df[df['Gender'] == 'others'].value_counts
+
+    return X, X2, X3
+
 def graph():
   # creates the plot
   mean_val = mean_age()  
@@ -28,3 +37,4 @@ def graph():
   html_str = mpld3.fig_to_html(fig)
 
   return html_str
+
