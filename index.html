@@ -146,10 +146,13 @@
       <button type="submit" id="submit-button">Submit</button>
     </div>
 
-    <div>
+    <div id="links">
       <div id="age">
         <!-- url specified which is function for routing for flask-->
           <a href="{{ url_for('age_mean') }}">Age</a>
+      </div>
+      <div id="gender">
+          <a href="{{ url_for('gender_count') }}"></a>
       </div>
     </div>
 
