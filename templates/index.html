@@ -142,6 +142,11 @@
       </select>
     </div>
 
+    <div id=form-sleep>
+      <label for="sleep_count">How many hours of sleep do you usually get?</label>
+      <input type="text", id="sleep_count" name="sleep_count" placeholder="Enter a number">
+    </div>
+
     <div id="form-submit">
       <button type="submit" id="submit-button">Submit</button>
     </div>
@@ -152,7 +157,7 @@
           <a href="{{ url_for('age_mean') }}">Age</a>
       </div>
       <div id="gender">
-          <a href="{{ url_for('gender-count') }}"></a>
+          <a href="{{ url_for('gender_count') }}">Gender</a>
       </div>
     </div>
 
